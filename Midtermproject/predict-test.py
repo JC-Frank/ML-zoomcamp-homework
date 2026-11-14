@@ -12,7 +12,7 @@ patient = {
     "scholarship": 1,
     "neighbourhood": "JARDIM DA PENHA",
     "age": 37,
-    "AppointmentDay": "2027-02-05T00:00:00Z"
+    "AppointmentDay": "2027-02-05T00:00:00Z",
     "ScheduledDay": "2026-11-14T18:38:08Z"
 }
 
