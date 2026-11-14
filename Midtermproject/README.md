@@ -15,14 +15,27 @@ train.py is the exported notebook which has been cleaned up afterwards, containi
 Data is available in the 'data' folder, both the notebook and the train.py script should automatically read in the dataset.
 If you are unable to execute it due to data not working the original dataset can be found on kaggle (https://www.kaggle.com/datasets/joniarroba/noshowappointments/data)
 
+### Dependency and environment management
+The project uses pipenv for dependency and environment management.
+The dependencies and versions are defined in 'Pipfile' and 'Pipfile.lock'. 
 
-### Instruction for flask deployment
-- set up two terminals
+if needed install Pipenv:
+pip install pipenv
 
-- run the following in terminal 1:
-cd /workspaces/ML-zoomcamp-homework/Midtermproject
-waitress-serve --listen=0.0.0.0:9696 predict:app
+### Instruction on how to set up the environment and run the model
+From the project directory, install the dependencies:
+Make sure you are in the Midtermproject directory.
+run 'cd Midtermproject' if you are in the toplevel folder
 
-- run the following on terminal 2:
-cd /workspaces/ML-zoomcamp-homework/Midtermproject
-python predict-test.py
+Install the dependencies:
+- pipenv install
+
+Activate the virtual environment:
+- pipenv shell 
+
+The model is set up as a Flask web service. It can be started by running the following line in a terminal:
+- waitress-serve --listen=0.0.0.0:9696 predict:app
+
+to test the model prediction open another terminal and run the follwoing lines:
+- pipenv shell
+- python predict-test.py
