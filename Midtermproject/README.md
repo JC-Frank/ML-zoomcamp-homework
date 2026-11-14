@@ -15,3 +15,14 @@ train.py is the exported notebook which has been cleaned up afterwards, containi
 Data is available in the 'data' folder, both the notebook and the train.py script should automatically read in the dataset.
 If you are unable to execute it due to data not working the original dataset can be found on kaggle (https://www.kaggle.com/datasets/joniarroba/noshowappointments/data)
 
+
+### Instruction for flask deployment
+- set up two terminals
+
+- run the following in terminal 1:
+cd /workspaces/ML-zoomcamp-homework/Midtermproject
+waitress-serve --listen=0.0.0.0:9696 predict:app
+
+- run the following on terminal 2:
+cd /workspaces/ML-zoomcamp-homework/Midtermproject
+python predict-test.py
