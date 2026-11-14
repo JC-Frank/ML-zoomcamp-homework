@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
+# !/usr/bin/env python
+#  coding: utf-8
 
 # Cleaned up version of the notebook, this is not a 1 to 1 copy. 
 # Most of the prints have been removed or commented out as they can be found in the nod
@@ -187,9 +187,13 @@ auc = roc_auc_score(y_test, y_pred)
 print(f'final auc={auc}')
 
 # Save the model
+import pickle
+
+output_file = f'model_RandomForest.bin'
+
 with open(output_file, 'wb') as f_out:
     pickle.dump((dv, rf), f_out)
 
-print(f'the model is saved to {output_file}')
+    print(f'the model is saved to {output_file}')
 
 
